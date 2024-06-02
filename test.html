@@ -5,93 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Мини-приложение Telegram</title>
   <script src="https://telegram.org/js/telegram-web-app.js"></script>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f0f0;
-    }
-
-    .header {
-      display: flex;
-      align-items: center;
-      padding: 20px;
-      background-color: #fff;
-    }
-
-    .avatar {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background-color: #ccc;
-    }
-
-    .user-info {
-      margin-left: 10px;
-    }
-
-    .username {
-      font-size: 18px;
-      font-weight: bold;
-    }
-
-    .user-id {
-      font-size: 14px;
-      color: #666;
-    }
-
-    .balance {
-      font-size: 24px;
-      font-weight: bold;
-      margin-top: 20px;
-    }
-
-    .promo-code-button {
-      display: block;
-      width: 150px;
-      height: 40px;
-      margin-top: 20px;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-
-    .promo-code-panel {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      padding: 20px;
-    }
-
-    .promo-code-input {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      margin-bottom: 10px;
-    }
-
-    .promo-code-submit-button {
-      display: block;
-      width: 100px;
-      height: 40px;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
   <div class="header">
-    <div class="avatar"></div>
+    <img class="avatar" src="https://pl.dreamstime.com/photos-images/kolby.html" alt="Аватар пользователя">
     <div class="user-info">
       <div class="username">Nik (ID)</div>
       <div class="user-id">123456789</div>
@@ -110,7 +27,6 @@
   <script>
     // Получить информацию о пользователе
     window.Telegram.WebApp.initDataUnsafe.user = {
-      avatar: "https://example.com/avatar.jpg",
       username: "Nik",
       id: 123456789,
       balance: 0
@@ -122,3 +38,12 @@
       const promoCodePanel = document.querySelector(".promo-code-panel");
       promoCodePanel.style.display = "block";
     });
+
+    // Обработка нажатия кнопки "Активировать"
+    const promoCodeSubmitButton = document.querySelector(".promo-code-submit-button");
+    promoCodeSubmitButton.addEventListener("click", () => {
+      // ...
+    });
+  </script>
+</body>
+</html>
